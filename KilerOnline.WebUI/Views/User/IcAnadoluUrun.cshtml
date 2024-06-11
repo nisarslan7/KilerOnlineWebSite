@@ -1,0 +1,81 @@
+﻿@using KilerOnline.DataAccess
+@using KilerOnline.Entities.Concrete
+@model List<Product>
+@{
+    ViewData["Title"] = "IcAnadoluUrun";
+}
+@Html.Partial("_Sidebar")
+<link href="~/css/imagediv.css" rel="stylesheet" />
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .responsive {
+            padding: 0 6px;
+            float: right; /* Elemanları sağa yaslar */
+            width: 300px; /* Sabit genişlik belirleme */
+            box-sizing: border-box;
+            margin: 20px 0; /* Üst ve alt kısımlarda biraz boşluk bırakır */
+        }
+
+        .gallery {
+            border: 1px solid #ccc;
+            margin: 6px 15px; /* Elemanlar arasına dikey boşluk ekler */
+            height: 100%; /* Galeri elemanlarının yüksekliklerini eşitler */
+        }
+
+            .gallery:hover {
+                border: 1px solid #777;
+            }
+
+            .gallery img {
+                width: 100%;
+                height: 100%; /* Resmin galeri elemanının içinde tam olarak yer almasını sağlar */
+            }
+
+        .desc {
+            background-color: rgba(255,239,213,0.3);
+            padding-top: 20px;
+            padding-right: 30px;
+            padding-bottom: 10px;
+            padding-left: 30px;
+            text-align: center;
+        }
+
+        .title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin-top: 660px; /* Tüm içeriği sayfanın üstünden 100 piksel aşağıya iter */
+        }
+    </style>
+
+
+
+</head>
+<body>
+    <img src=" ../img/adsız tasarım (2).png" class="logo" alt="logo">
+    @foreach (var product in Model)
+    {
+        <div class="responsive">
+            <div class="gallery">
+                <img src="~/img/Products/@product.ImageUrl" alt="@product.Name">
+                <div class="title">@product.Name</div>
+                <div class="desc">@product.ProductExplanation</div>
+            </div>
+        </div>
+    }
+</body>
+</html>
+

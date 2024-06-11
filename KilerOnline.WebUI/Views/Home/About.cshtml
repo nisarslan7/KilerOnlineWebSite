@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ekibimiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap; /* Yeni eklenen stil */
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #F1EEDC; /* Arka plan rengi */
+        color: #ecf0f1; /* Metin rengi */
+    }
+
+    .team-container {
+        text-align: center;
+        max-width: 1200px;
+        padding: 32px;
+        box-sizing: border-box;
+        white-space: nowrap; /* İçeriği yatayda sığdır */
+        overflow-x: auto; /* Yatay kaydırma çubuğu ekle */
+    }
+
+        .team-container h1 {
+            width: 100%; /* Yeni eklenen stil */
+            font-size: 36px;
+            color: #79AC78; /* Başlık rengi */
+        }
+
+    .team-member {
+        display: inline-block;
+        width: 250px;
+        margin: 15px;
+        background-color: #79AC78; /* Takım üye kutusu arka plan rengi */
+        border-radius: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s;
+
+        .team-member:hover {
+            transform: translateY(-10px);
+        }
+
+    .member-photo {
+        position: relative;
+        overflow: hidden;
+        border-top-left-radius: 15px;
+        border-top-right-radius: 15px;
+    }
+
+        .member-photo img {
+            width: 100%;
+            transition: transform 0.3s, filter 0.3s;
+        }
+
+        .member-photo:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+    .team-member h2 {
+        margin: 15px 0 5px 0;
+        font-size: 22px;
+        color: #ecf0f1; /* Başlık rengi */
+    }
+
+    .team-member p {
+        margin: 5px 20px;
+        color: #ecf0f1; /* Metin rengi */
+    }
+</style>
+<body>
+    <div class="team-container">
+        <h1 style="font-family: 'Courier New', Courier, monospace;">E K İ B İ M İ Z</h1>
+        <div class="team-member">
+            <img src="/img/yasin1.jpeg" alt="Person 1">
+            <h2>AHMET YASİN DOĞAN</h2>
+            <p>2207950025</p>
+        </div>
+        <div class="team-member">
+            <img src="/img/nisa.jpeg" alt="Person 2">
+            <h2>NİSA ARSLAN</h2>
+            <p>2207950015</p>
+        </div>
+        <div class="team-member">
+            <img src="/img/şeyma.jpeg" alt="Person 3">
+            <h2>ŞEYMA BURAN</h2>
+            <p>2207950024</p>
+        </div>
+        <div class="team-member">
+            <img src="/img/beyza.jpeg" alt="Person 4">
+            <h2>BEYZA YAVUZ</h2>
+            <p>2207950034</p>
+        </div>
+    </div>
+</body>
+</html>

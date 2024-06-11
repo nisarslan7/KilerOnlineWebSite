@@ -1,0 +1,57 @@
+﻿@model IEnumerable<KilerOnline.Entities.Concrete.User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+<link href="~/css/adminpanel.css" rel="stylesheet" />
+<h1>Admin Paneli</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlıklar</th>
+            <th>Ekle</th>
+            <th>Güncelle</th>
+            <th>Sil</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Kullanıcı</td>
+            <td>
+                <a asp-controller="Admin" asp-action="AddUser" class="btn btn-primary">Ekle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="UpdateUser" class="btn btn-success">Güncelle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="RemoveUser" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Ürün</td>
+            <td>
+                <a asp-controller="Admin" asp-action="AddProduct" class="btn btn-primary">Ekle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="UpdateProduct" class="btn btn-success">Güncelle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="RemoveProduct" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+        <tr>
+            <td>Yemek</td>
+            <td>
+                <a asp-controller="Admin" asp-action="AddFood" class="btn btn-primary">Ekle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="UpdateFood" class="btn btn-success">Güncelle</a>
+            </td>
+            <td>
+                <a asp-controller="Admin" asp-action="RemoveFood" class="btn btn-danger">Sil</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+

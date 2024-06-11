@@ -1,0 +1,139 @@
+﻿@using KilerOnline.DataAccess
+@using KilerOnline.Entities.Concrete
+@model List<Food>
+@{
+    ViewData["Title"] = "AkdenizYemek";
+}
+@Html.Partial("_Sidebar")
+
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fafafa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            align-items: center;
+            margin-top: 5500px;
+        }
+
+        .header {
+            text-align: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #436850;
+        }
+
+            .header img {
+                max-width: 100%;
+                border-radius: 10px;
+            }
+
+        .title {
+            font-size: 2.5em;
+            margin: 10px 0;
+            color: #444;
+        }
+
+        .story {
+            font-size: 1em;
+            margin: 10px 0;
+            color: #666;
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+            padding: 10px 0;
+            border-top: 1px solid #eee;
+            border-bottom: 1px solid #eee;
+        }
+
+            .info div {
+                text-align: center;
+                flex: 1;
+                margin: 0 10px;
+            }
+
+        .ingredients, .instructions {
+            margin: 20px 0;
+        }
+
+            .ingredients h2, .instructions h2 {
+                font-size: 1.5em;
+                color: #444;
+                margin-bottom: 10px;
+            }
+
+            .ingredients ul {
+                list-style-type: none;
+                padding: 0;
+            }
+
+                .ingredients ul li {
+                    background-color: #f7f7f7;
+                    margin: 5px 0;
+                    padding: 10px;
+                    border-radius: 5px;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+                }
+
+            .instructions p {
+                margin: 10px 0;
+                line-height: 1.6;
+                color: #555;
+            }
+
+            .ingredients ol {
+                list-style-type: none;
+                padding: 0;
+            }
+
+            .instructions ol li {
+                background-color: #f7f7f7;
+                margin: 5px 0;
+                padding: 10px;
+                border-radius: 5px;
+                box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            }
+    </style>
+</head>
+<body>
+    <img src=" ../img/adsız tasarım (2).png" class="logo" alt="logo">
+    @foreach (var food in Model)
+    {
+        <div class="responsive">
+            <div class="gallery">
+
+                <img src="~/img/Foods/@food.ImageUrl" alt="@food.Name">
+                <div class="title">@food.Name</div>
+                <h1>Hikaye</h1>
+                <div class="story">@food.Story</div>
+                <div class="serving">@food.PersonCount</div>
+                <div class="time">@food.Time</div>
+                <h1>Malzemeler</h1>
+                <div class="ingredients">@food.Ingredients</div>
+                <h1>Hazırlanış</h1>
+                <div class="instructions">@food.Preparation</div>
+            </div>
+
+        </div>
+    }
+</body>
+</html>

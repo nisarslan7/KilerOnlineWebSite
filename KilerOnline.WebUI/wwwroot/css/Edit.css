@@ -1,0 +1,98 @@
+﻿body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+h1 {
+    background-color: #FF8F00;
+    color: #fff;
+    padding: 20px 0;
+    margin: 0 0 20px 0;
+}
+
+h4 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+hr {
+    width: 80%;
+    margin: 0 auto 20px auto;
+    border: 1px solid #ddd;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.col-md-6 {
+    width: 60%; /* Yeni genişlik */
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.control-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.form-control {
+    width: 200%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.text-danger {
+    color: red;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 15px;
+    margin: 10px 0;
+    text-decoration: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+}
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+.btn-danger {
+    background-color: red;
+    color: white;
+    /* Buton metninin rengi */
+}
+.btn-danger:hover {
+    background-color:red;
+}
+
+
+
+a {
+    color:  #007bff;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }

@@ -1,0 +1,67 @@
+﻿@model KilerOnline.Entities.Concrete.Food
+
+@{
+    ViewData["Title"] = "AddFood";
+}
+<link href="~/css/edit.css" rel="stylesheet" />
+<h1>Yemek Ekle</h1>
+
+<h4>Yemek</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-controller="Admin" asp-action="AddFood" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Preparation" class="control-label"></label>
+                <input asp-for="Preparation" class="form-control" />
+                <span asp-validation-for="Preparation" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Time" class="control-label"></label>
+                <input asp-for="Time" class="form-control" />
+                <span asp-validation-for="Time" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PersonCount" class="control-label"></label>
+                <input asp-for="PersonCount" class="form-control" />
+                <span asp-validation-for="PersonCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Story" class="control-label"></label>
+                <input asp-for="Story" class="form-control" />
+                <span asp-validation-for="Story" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Ingredients" class="control-label"></label>
+                <input asp-for="Ingredients" class="form-control" />
+                <span asp-validation-for="Ingredients" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label for="exampleFormControlFile1">Dosya Yükle</label>
+                <input type="file" name="formFile" class="form-control-file" id="exampleFormControlFile1">
+            </div>
+            <div class="form-group">
+                <label asp-for="CategoryId" class="control-label"></label>
+                <input asp-for="CategoryId" class="form-control" />
+                <span asp-validation-for="CategoryId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RegionId" class="control-label"></label>
+                <input asp-for="RegionId" class="form-control" />
+                <span asp-validation-for="RegionId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+                <a asp-controller="Admin" asp-action="Index" class="btn btn-danger">Ana Sayfa</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+

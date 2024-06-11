@@ -1,0 +1,94 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<link rel="stylesheet" href="~/css/StyleSheet.css">
+<style>
+
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-size: cover;
+        background-image: url('../img/Kiler.png');
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+    }
+
+    .login-container {
+        top: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        height: 450px;
+        width: 500px;
+        text-align: center;
+        position: absolute;
+        top: 160px;
+        right: 100px;
+        font-size: 18px;
+        background-image: url("background4.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #000000;
+        font-family: Neo Sans Font;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    button {
+        width: 50%;
+        padding: 10px;
+        background-color: #DC5F00;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+        margin-bottom: 20px; /* Butonlar arasına boşluk eklemek için */
+    }
+
+    p {
+        font-size: 15px;
+    }
+
+    button:hover {
+        background-color: #c22401;
+    }
+
+    #div1 {
+        background-color: #FDDE55;
+        background-color: rgba(253, 222, 85, 0);
+    }
+</style>
+<body>
+    <div id="div1" class="login-container">
+        <h2>HOŞGELDİNİZ</h2>
+        <a href="/Home/Login">
+            <button type="submit">Giriş Yap</button>
+        </a>
+
+        <p>Hesabınız yok mu?</p>
+        <a href="/Home/Register">
+            <button type="submit">Kayıt ol</button>
+        </a>
+
+    </div>
+</body>
+</html>

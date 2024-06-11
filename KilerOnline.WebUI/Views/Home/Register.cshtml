@@ -1,0 +1,140 @@
+﻿@model KilerOnline.Entities.Concrete.User
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f7f7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('../img/Kiler.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    .col-md-4 {
+        top: 10px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        height: 450px;
+        width: 500px;
+        text-align: center;
+        position: absolute;
+        top: 160px;
+        right: 100px;
+        font-size: 18px;
+        background-image: url("background4.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: #000000;
+        font-family: Neo Sans Font;
+    }
+
+    .form-group {
+        margin-bottom: 20px;
+        text-align: left;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    label {
+        display: block;
+        margin-bottom: 11px;
+        color: #000000;
+    }
+
+    input[type="text"], input[type="password"] {
+        width: 100%;
+        border-style: inherit;
+        padding: 10px;
+        box-sizing: border-box;
+        border-color: #B0EBB4;
+        border-radius: 1px;
+    }
+
+    button {
+        width: 50%;
+        padding: 10px;
+        background-color: #DC5F00;
+        border: none;
+        border-radius: 4px;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+        button:hover {
+            background-color: #c22401;
+        }
+
+    #div1 {
+        background-color: #FDDE55;
+        background-color: rgba(253, 222, 85, 0);
+    }
+
+    #username, #password {
+        background-color: #FFF8DC;
+    }
+
+    .row {
+        margin-left: px;
+        margin-right: 0;
+    }
+
+</style>
+<body>
+    <div class="row">
+        <div class="col-md-4">
+            <h2>KAYIT OL</h2>
+            <form asp-action="Register">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="UserName" class="control-label"></label>
+                    <input asp-for="UserName" class="form-control" />
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Name" class="control-label"></label>
+                    <input asp-for="Name" class="form-control" />
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Password" class="control-label"></label>
+                    <input asp-for="Password" class="form-control" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+                <div class="form-group" hidden>
+                    <label asp-for="RoleId" class="control-label" hidden></label>
+                    <input asp-for="RoleId" class="form-control" value="2" hidden /> <!-- Varsayılan değer 2 -->
+                    <span asp-validation-for="RoleId" class="text-danger" hidden ></span>
+                </div>
+                <a href="/Home/Login">
+                    <button type="submit"> Register</button>
+                </a>
+            </form>
+            
+        </div>
+    </div>
+
+</body>
+</html>
+
